@@ -1,8 +1,7 @@
 import path from 'path';
 
+import shell from 'shelljs';
 import test from 'ava';
-
-import shell from '..';
 
 const binPath = path.resolve(__dirname, '../bin/shjs');
 
