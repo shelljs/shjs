@@ -2,7 +2,6 @@
   "name": "shelljs-shjs",
   "version": "1.0.0",
   "description": "Binary to invoke ShellJS scripts",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,6 +23,9 @@
     "bin"
   ],
   "homepage": "https://github.com/shelljs/shjs#readme",
+  "bin": {
+    "shjs": "./bin/shjs"
+  },
   "dependencies": {
     "interpret": "^1.2.0",
     "rechoir": "^0.7.0"
