@@ -1,0 +1,27 @@
+{
+  "env": {
+    "node": true
+  },
+  "extends": "airbnb-base",
+  "rules": {
+    "curly": "off",
+    "global-require": "off",
+    "import/no-mutable-exports": "off",
+    "indent": "off",
+    "max-len": "off",
+    "no-console": "off",
+    "no-param-reassign": "off",
+    "no-underscore-dangle": "off",
+    "no-var": "error",
+    "prefer-arrow-callback": "off",
+    "prefer-const": "error",
+    "prefer-template": "off",
+    "spaced-comment": ["error", "always", { "markers": ["@", "@include"], "exceptions": ["@"] }],
+    "vars-on-top": "off",
+    "new-cap": ["error", {
+      "capIsNewExceptions": [
+        "ShellString"
+      ]}
+    ]
+  }
+}
