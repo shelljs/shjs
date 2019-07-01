@@ -1,0 +1,31 @@
+{
+  "name": "shelljs-shjs",
+  "version": "1.0.0",
+  "description": "Binary to invoke ShellJS scripts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shelljs/shjs.git"
+  },
+  "keywords": [
+    "shjs",
+    "shelljs",
+    "binary"
+  ],
+  "author": "Nate Fischer <ntfschr@gmail.com> (https://github.com/nfischer)",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/shelljs/shjs/issues"
+  },
+  "files": [
+    "bin"
+  ],
+  "homepage": "https://github.com/shelljs/shjs#readme",
+  "dependencies": {
+    "interpret": "^1.2.0",
+    "rechoir": "^0.7.0"
+  }
+}
