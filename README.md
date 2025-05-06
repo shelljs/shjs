@@ -1,7 +1,6 @@
 # Shjs
 
-[![Travis](https://img.shields.io/travis/shelljs/shjs/master.svg?style=flat-square&label=unix)](https://travis-ci.org/shelljs/shjs)
-[![AppVeyor](https://img.shields.io/appveyor/ci/shelljs/shjs/master.svg?style=flat-square&label=windows)](https://ci.appveyor.com/project/shelljs/shjs/branch/master)
+[![GitHub Actions](https://img.shields.io/github/actions/workflow/status/shelljs/shjs/main.yml?style=flat-square&logo=github)](https://github.com/shelljs/shjs/actions/workflows/main.yml)
 [![Codecov](https://img.shields.io/codecov/c/github/shelljs/shjs/master.svg?style=flat-square&label=coverage)](https://codecov.io/gh/shelljs/shjs)
 [![npm version](https://img.shields.io/npm/v/shelljs-shjs.svg?style=flat-square)](https://www.npmjs.com/package/shelljs-shjs)
 
