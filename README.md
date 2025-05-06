@@ -1,7 +1,7 @@
 # Shjs
 
 [![GitHub Actions](https://img.shields.io/github/actions/workflow/status/shelljs/shjs/main.yml?style=flat-square&logo=github)](https://github.com/shelljs/shjs/actions/workflows/main.yml)
-[![Codecov](https://img.shields.io/codecov/c/github/shelljs/shjs/master.svg?style=flat-square&label=coverage)](https://codecov.io/gh/shelljs/shjs)
+[![Codecov](https://img.shields.io/codecov/c/github/shelljs/shjs/main.svg?style=flat-square&label=coverage)](https://codecov.io/gh/shelljs/shjs)
 [![npm version](https://img.shields.io/npm/v/shelljs-shjs.svg?style=flat-square)](https://www.npmjs.com/package/shelljs-shjs)
 
 `shjs` binary, formerly distributed as part of
