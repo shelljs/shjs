@@ -1,7 +1,8 @@
-import path from 'path';
+const path = require('path');
 
-import shell from 'shelljs';
-import test from 'ava';
+const test = require('ava');
+
+const shell = require('shelljs');
 
 const binPath = path.resolve(__dirname, '../bin/shjs');
 
@@ -58,5 +59,7 @@ test('Extension detection', t => {
 //
 
 test('disallow require-ing', t => {
-  t.throws(() => require(binPath), 'Executable-only module should not be required');
+  t.throws(() => require(binPath),
+    { instanceOf: Error },
+    'Executable-only module should not be required');
 });
