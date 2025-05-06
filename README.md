@@ -21,3 +21,31 @@ appropriate for the language of the script, ex. `coffee`).
 
 This package was removed from ShellJS to reduce that module's dependencies and
 to shrink overall download size.
+
+## Usage
+
+You can install with `npm install shelljs-shjs`:
+
+```shell
+$ npm install -g shelljs-shjs
+```
+
+This script is a convenience wrapper for guessing the right interpreter to use
+for your script. It also brings your local shelljs install to the front of the
+`NODE_PATH` to ensure this is used.
+
+```javascript
+#!/usr/bin/env shjs
+
+// Save this demo as 'example_script.js'
+
+var shell = require('shelljs');
+shell.echo('hello world');
+```
+
+Then run the demo script with:
+
+```shell
+$ shjs example_script.js
+hello world
+```

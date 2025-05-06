@@ -41,8 +41,8 @@
   },
   "dependencies": {
     "interpret": "^1.2.0",
-    "shelljs": "^0.9.2",
-    "rechoir": "^0.7.0"
+    "rechoir": "^0.7.0",
+    "shelljs": "^0.9.2"
   },
   "devDependencies": {
     "ava": "^6.2.0",
