@@ -34,12 +34,7 @@ if (!test('-f', scriptName)) {
 }
 
 args = process.argv.slice(3);
-
-for (var i = 0, l = args.length; i < l; i++) {
-  if (args[i][0] !== "-"){
-    args[i] = '"' + args[i] + '"'; // fixes arguments with multiple words
-  }
-}
+process.argv = [process.argv[0], process.argv[1], ...args];
 
 var path = require('path');
 var extensions = require('interpret').extensions;

@@ -6,13 +6,19 @@ const shell = require('shelljs');
 
 const binPath = path.resolve(__dirname, '../bin/shjs');
 
-function runWithShjs(name) {
+function runWithShjs(name, ...args) {
   // prefix with 'node ' for Windows, don't prefix for unix
   const execPath = process.platform === 'win32'
     ? `${JSON.stringify(shell.config.execPath)} `
     : '';
   const script = path.resolve(__dirname, 'resources', 'shjs', name);
-  return shell.exec(`${execPath}${binPath} ${script}`, { silent: true });
+  let argString = args.map(arg => JSON.stringify(arg)).join(' ');
+  if (argString) {
+    argString = ' ' + argString;
+  }
+  return shell.exec(`${execPath}${binPath} ${script}${argString}`, {
+    silent: true
+  });
 }
 
 //
@@ -58,6 +64,13 @@ test('CoffeeScript extension inference', t => {
   const result = runWithShjs('coffeescript');
   t.is(result.code, 0);
   t.is(result.stdout, 'CoffeeScript: OK!\n');
+  t.falsy(result.stderr);
+});
+
+test('Multiple arguments', t => {
+  const result = runWithShjs('echo-args.js', 'hello', 'there');
+  t.is(result.code, 0);
+  t.regex(result.stdout, /hello there\n$/);
   t.falsy(result.stderr);
 });
 
