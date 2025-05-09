@@ -47,10 +47,17 @@ test('CoffeeScript', t => {
   t.falsy(result.stderr);
 });
 
-test('Extension detection', t => {
+test('JS extension inference', t => {
   const result = runWithShjs('a-file');
   t.is(result.code, 0);
   t.is(result.stdout, 'OK!\n');
+  t.falsy(result.stderr);
+});
+
+test('CoffeeScript extension inference', t => {
+  const result = runWithShjs('coffeescript');
+  t.is(result.code, 0);
+  t.is(result.stdout, 'CoffeeScript: OK!\n');
   t.falsy(result.stderr);
 });
 
