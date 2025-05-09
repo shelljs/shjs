@@ -1,6 +1,6 @@
 {
   "name": "shelljs-shjs",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Binary to invoke ShellJS scripts",
   "scripts": {
     "posttest": "npm run lint",
