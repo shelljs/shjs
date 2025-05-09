@@ -25,6 +25,7 @@
     "url": "https://github.com/shelljs/shjs/issues"
   },
   "files": [
+    "index.js",
     "bin"
   ],
   "homepage": "https://github.com/shelljs/shjs#readme",
