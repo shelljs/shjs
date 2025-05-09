@@ -11,6 +11,11 @@ function runWithShjs(name, ...args) {
   const execPath = process.platform === 'win32'
     ? `${JSON.stringify(shell.config.execPath)} `
     : '';
+  if (!name) {
+    return shell.exec(`${execPath}${binPath}`, {
+      silent: true
+    });
+  }
   const script = path.resolve(__dirname, 'resources', 'shjs', name);
   let argString = args.map(arg => JSON.stringify(arg)).join(' ');
   if (argString) {
@@ -82,4 +87,18 @@ test('disallow require-ing', t => {
   t.throws(() => require(binPath),
     { instanceOf: Error },
     'Executable-only module should not be required');
+});
+
+test('Script file does not exist', t => {
+  const result = runWithShjs('fake-file.js');
+  t.is(result.code, 1);
+  t.regex(result.stdout, /^ShellJS: script not found.*fake-file\.js.*/);
+  t.falsy(result.stderr);
+});
+
+test('Missing script file name argument', t => {
+  const result = runWithShjs();
+  t.is(result.code, 1);
+  t.regex(result.stdout, /^ShellJS: missing argument \(script name\).*/);
+  t.falsy(result.stderr);
 });
